@@ -2,6 +2,7 @@ import './App.css';
 import { TonConnectButton } from '@tonconnect/ui-react';
 import { useTonConnect } from './hooks/useTonConnect';
 import { useCounterContract } from './hooks/useCounterContract';
+import '@twa-dev/sdk';
 
 function App() {
   const { connected } = useTonConnect();
@@ -14,9 +15,9 @@ function App() {
 
         <div className='Card'>
           <b>Counter Address</b>
-          <div className='Hint'>{address?.slice(0, 30) + '...'}</div>
+          <div className='Hint'>{address?.slice(0, 48)}</div>
         </div>
-
+        
         <div className='Card'>
           <b>Counter Value</b>
           <div>{value ?? 'Loading...'}</div>
